@@ -424,3 +424,18 @@ h2 span, h1 span { color: var(--accent); }
   position: absolute;
   left: 0;
 }
+
+@media (max-width: 680px) {
+  .timeline-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .timeline-image img {
+    max-height: 320px;
+  }
+
+  .timeline-content {
+    width: 100%;
+  }
+}
