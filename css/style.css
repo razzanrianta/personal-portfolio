@@ -684,9 +684,9 @@ h1 span {
 }
 
 .project-description {
-  color: var(--muted);
   font-size: .87rem;
   margin-bottom: 17px;
+  text-align: justify;
 }
 
 .project-highlights {
