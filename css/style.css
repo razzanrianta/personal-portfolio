@@ -196,17 +196,21 @@ h1 span {
 /* Hero */
 .hero {
   min-height: min(790px, calc(100vh - 78px));
-  display: grid;
+  display: flex;
   grid-template-columns: 1.25fr .75fr;
   align-items: center;
   gap: 70px;
   position: relative;
   padding-top: 90px;
   padding-bottom: 125px;
+  justify-content: center;
+  text-align: center;
 }
 
 .hero-copy {
-  max-width: 690px;
+  max-width: 900px;
+  width: 100%;
+  margin-inline: auto;
 }
 
 .hero .eyebrow {
@@ -214,6 +218,10 @@ h1 span {
   align-items: center;
   gap: 10px;
   margin-bottom: 28px;
+}
+
+.eyebrow {
+  justify-content: center;
 }
 
 .status-dot {
@@ -235,6 +243,7 @@ h1 span {
   color: var(--muted);
   font-size: 1.06rem;
   max-width: 560px;
+  margin-inline: auto;
 }
 
 .hero-actions {
@@ -242,6 +251,7 @@ h1 span {
   flex-wrap: wrap;
   gap: 13px;
   margin-top: 36px;
+  justify-content: center;
 }
 
 .button {
@@ -284,6 +294,7 @@ h1 span {
   display: flex;
   gap: 26px;
   margin-top: 42px;
+  justify-content: center;
 }
 
 .hero-socials a {
@@ -407,6 +418,28 @@ h1 span {
   color: var(--muted-2);
   font-size: .62rem;
   letter-spacing: .16em;
+  justify-content: center;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 380px;
+  margin-inline: auto;
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
 }
 
 .scroll-cue span {
@@ -470,7 +503,7 @@ h1 span {
 }
 
 .skill-card {
-  min-height: 245px;
+  min-height: auto;
   padding: 28px;
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -1085,6 +1118,18 @@ h1 span {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (max-width: 768px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-image {
+    max-width: 280px;
+  }
+}
+
 
 @media (max-width: 680px) {
   .container {
